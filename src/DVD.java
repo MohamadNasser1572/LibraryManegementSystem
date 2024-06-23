@@ -8,6 +8,14 @@ public class DVD extends Item implements Borrowable {
         this.isBorrowed = false;
     }
 
+    //the updated LMS
+    public String getDirector() {
+        return director;
+    }
+
+
+
+
     @Override
     public void borrowItem() throws ItemNotAvailableException, ItemAlreadyBorrowedException {
         if (isBorrowed) {
