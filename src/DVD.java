@@ -8,13 +8,9 @@ public class DVD extends Item implements Borrowable {
         this.isBorrowed = false;
     }
 
-    //the updated LMS
     public String getDirector() {
         return director;
     }
-
-
-
 
     @Override
     public void borrowItem() throws ItemNotAvailableException, ItemAlreadyBorrowedException {
@@ -29,6 +25,7 @@ public class DVD extends Item implements Borrowable {
         if (!isBorrowed) {
             throw new ItemNotAvailableException("This DVD was not borrowed.");
         }
+        isBorrowed = false;
     }
 
     @Override
@@ -39,11 +36,11 @@ public class DVD extends Item implements Borrowable {
     @Override
     public String toString() {
         String str = "DVD{" + "director: '" + director + '\'';
-        if(isBorrowed){
-            str+=" is borrowed.";
+        if (isBorrowed) {
+            str += " is borrowed.";
+        } else {
+            str += " is not borrowed.";
         }
-        else
-            System.out.println(" is not borrowed.");
-        return str;
+        return str + "}";
     }
 }

@@ -21,7 +21,7 @@ public class Book extends Item implements Borrowable {
         if (!isBorrowed) {
             throw new ItemNotAvailableException("The book " + getTitle() + " was not borrowed.");
         }
-
+        isBorrowed = false;
     }
 
     @Override
@@ -31,12 +31,12 @@ public class Book extends Item implements Borrowable {
 
     @Override
     public String toString() {
-        String str = "DVD{" + "author: '" + author + '\'';
-        if(isBorrowed){
-            str+=" is borrowed.";
+        String str = "Book{" + "author: '" + author + '\'';
+        if (isBorrowed) {
+            str += " is borrowed.";
+        } else {
+            str += " is not borrowed.";
         }
-        else
-            System.out.println(" is not borrowed.");
-        return str;
+        return str + "}";
     }
 }
