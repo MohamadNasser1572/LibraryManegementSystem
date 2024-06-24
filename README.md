@@ -26,13 +26,13 @@ This repository contains a Library Management System built using Java. The appli
   - `id` (String)
   - `title` (String)
   - `year` (int)
-3. Add a constructor to initialize these fields.
-4. Create getter and setter methods for each field.
-5. Override the `toString` method to display item details.
-6. Add an abstract method `getType()` that returns a String.
+1. Add a constructor to initialize these fields.
+2. Create getter and setter methods for each field.
+3. Override the `toString` method to display item details.
+4. Add an abstract method `getType()` that returns a String.
 
-7. Create an interface called `Borrowable`.
-8. Add methods `borrowItem()` and `returnItem()`. These methods should throw custom exceptions.
+5. Create an interface called `Borrowable`.
+6. Add methods `borrowItem()` and `returnItem()`. These methods should throw custom exceptions.
 
 #### Step 2: Create Custom Exceptions
 1. Create a custom exception called `ItemNotAvailableException`.
@@ -40,7 +40,7 @@ This repository contains a Library Management System built using Java. The appli
 
 #### Step 3: Create Derived Classes
 1. Create a class called `Book` that extends `Item` and implements `Borrowable`.
-2. Add an additional field `author` (String) to the `Book` class.
+2. Add a field `author` (String) to the `Book` class.
 3. Add a field `isBorrowed` (boolean) to track the borrowing status.
 4. Add a constructor that initializes all fields, including the inherited ones.
 5. Override the `toString` method to include the `author` field.
@@ -48,7 +48,7 @@ This repository contains a Library Management System built using Java. The appli
 7. Implement the `borrowItem()` and `returnItem()` methods, including exception handling.
 
 8. Similarly, create a class called `DVD` that extends `Item` and implements `Borrowable`.
-9. Add an additional field `director` (String) to the `DVD` class.
+9. Add a field `director` (String) to the `DVD` class.
 10. Add a field `isBorrowed` (boolean) to track the borrowing status.
 11. Add a constructor that initializes all fields, including the inherited ones.
 12. Override the `toString` method to include the `director` field.
@@ -102,7 +102,7 @@ I understand, I'll guide you step by step without providing the full implementat
   - Create a class extending `Exception`.
   - Add a constructor that accepts a message and passes it to the superclass constructor.
 
-2. **Define `ItemAlreadyBorrowedException`:**
+1. **Define `ItemAlreadyBorrowedException`:**
   - Create a class extending `Exception`.
   - Add a constructor that accepts a message and passes it to the superclass constructor.
 
@@ -152,11 +152,11 @@ I understand, I'll guide you step by step without providing the full implementat
   - Ensure all common attributes and methods are properly encapsulated.
   - Abstract methods force subclasses to provide specific implementations.
 
-2. **Interface `Borrowable`:**
+1. **Interface `Borrowable`:**
   - Focus on enforcing the borrowing contract on any item that can be borrowed.
 
-3. **Exception Handling:**
+1. **Exception Handling:**
   - Use exceptions to handle illegal operations and provide informative error messages.
 
-4. **Class Relationships:**
+1. **Class Relationships:**
   - Ensure that `Book` and `DVD` properly extend `Item` and implement `Borrowable`.
